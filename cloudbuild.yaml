@@ -1,0 +1,5 @@
+steps:
+  - name: 'building docker image'
+    args: ['build','-t','gcr.io/$PROJECT_ID/flaskapp','.']
+images:
+  - ,'gcr.io/$PROJECT_ID/flaskapp''
