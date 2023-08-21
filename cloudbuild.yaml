@@ -9,4 +9,5 @@ steps:
     - --filename=gke.yaml
     - --namespace=prod 
     - --cluster=cluster-2
+    - --location=us-central1-c
 
