@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: flaskapp
-        image: gcr.io/careful-journey-395914/flaskapp:latest
+        image: gcr.io/careful-journey-395914/flaskapp:$SHORT_SHA
         ports:
         - containerPort: 5000
         env:
