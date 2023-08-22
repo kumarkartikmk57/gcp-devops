@@ -20,5 +20,21 @@ spec:
         env:
           - name: PORT
             value: "5000"
+            
+apiVersion: apps/v1
+kind: Service
+metadata:
+  name: flaskappservice
+  namespace: prod
+  labels:
+    app.kubernetes.io/managed-by:"gcp-cloud-build-deploy"
+spec:
+ ports:
+ - protocol: "TCP"
+   port: 80
+   targetPort: 5000
+ selector:
+   app: flaskapp
+ type: "LoadBalancer"
 
 
