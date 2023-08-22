@@ -10,4 +10,5 @@ steps:
     - --namespace=prod 
     - --cluster=cluster-2
     - --location=us-central1-c
+    - --image=gcr.io/$PROJECT_ID/flaskapp:$SHORT_SHA
 
