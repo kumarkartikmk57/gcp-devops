@@ -15,10 +15,6 @@ spec:
       containers:
       - name: flaskapp
         image: gcr.io/careful-journey-395914/flaskapp:latest
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
         ports:
         - containerPort: 5000
         env:
