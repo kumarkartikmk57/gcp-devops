@@ -3,7 +3,7 @@ steps:
     args: ['build','-t','gcr.io/$PROJECT_ID/flaskapp:$SHORT_SHA','.']
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push','gcr.io/$PROJECT_ID/flaskapp:$SHORT_SHA']
-  - name: 'gcr.io/cloud-builders/kubectl'
+  - name: 'gcr.io/cloud-builders/gke-deploy'
     args:
     - 'set'
     - 'image'
