@@ -11,3 +11,7 @@ steps:
     - 'flaskapp=gcr.io/$PROJECT_ID/flaskapp:$SHORT_SHA'
     - '--record'
     - '--namespace=prod'
+    env:
+    - 'CLOUDSDK_COMPUTE_ZONE=us-central1-c'
+    - 'CLOUDSDK_CONTAINER_CLUSTER=cluster-2'
+images: ['gcr.io/cloud-builders/kubectl']
